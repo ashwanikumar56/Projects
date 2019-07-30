@@ -1,0 +1,18 @@
+PUT HTTP method:
+
+An HTTP PUT method is used to primarily update the resource information but  it also can be used to create a new resource (Depends on API development) if requested resource is not available. 
+
+NOTE:
+
+If PUT request is made to update resource, it should return 200 (OK) and 204 (No Content) status code. If PUT request is made to create a new resource, it must return a status code 201( Created). 
+
+PUT is not a safe method as it performs data creation and modifications but it is idempotent as if we hit the same request again, it operates on same existing resource. But note here that a PUT request can be made as non-idempotent as well.
+
+
+POST, PUT, and PATCH are somewhat similar in their functionality but each needs to be used at the right time in the right way.
+
+POST — creating a new resource
+
+PUT — updating a resource with new and existing information
+
+PATCH — modifying an existing resource with just new information

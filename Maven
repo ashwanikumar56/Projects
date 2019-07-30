@@ -1,0 +1,72 @@
+INTRODUCTION:
+------------
+
+Building a software project typically consists of such tasks as downloading dependencies, putting additional jars on a classpath, compiling source code into binary code, running tests, packaging compiled code into deployable artifacts such as JAR, WAR, and ZIP files, and deploying these artifacts to an application server or repository.
+
+Apache Maven automates these tasks, minimizing the risk of humans making errors while building the software manually and separating the work of compiling and packaging our code from that of code construction.
+
+Project Object Model(POM);
+---------------------------
+
+The configuration of a Maven project is done via a Project Object Model (POM), represented by a pom.xml file. The POM describes the project, manages dependencies, and configures plugins for building the software.
+
+The POM also defines the relationships among modules of multi-module projects. Let’s look at the basic structure of a typical POM file
+
+. Project Identifiers:
+-----------------------
+
+Maven uses a set of identifiers, also called coordinates, to uniquely identify a project and specify how the project artifact should be packaged:
+
+groupId – a unique base name of the company or group that created the project
+artifactId – a unique name of the project
+version – a version of the project
+packaging – a packaging method (e.g. WAR/JAR/ZIP)
+The first three of these (groupId:artifactId:version) combine to form the unique identifier and are the mechanism by which you specify which versions of external libraries (e.g. JARs) your project will use.
+
+
+MAVEN PROJECT STRUCTURE:
+------------------------
+
+src/main/java
+src/test/java
+src/it
+
+src/main/java:
+--------------
+
+
+Inside this folder you can put all the application source files. Classes and packages for the main (real) artifact should be put in this folder.
+All the content inside of this directory will be put in the classpath of the generated artifact. If the artifact is a jar file, all the classes and packages will be in the root folder of the generated jar, so it will be available by default on the runtime classpath.
+
+If the artifact is a war, all the classes and packages will be put inside the WEB-INF/classes directory, so it will be available on the runtime classpath by default.
+
+When the project is build or packaged all those classes and packages will be put in the target folder.
+
+If you use eclipse as your IDE, this directory will be put inside the java build path automatically when you give the maven nature to the project.
+
+
+src/test/java:
+-------------
+
+Inside this folder you can put all the application test source files. Classes and packages for the test artifact should be put in this folder.
+
+src/it:
+-------
+
+Inside this folder you can put all the application integration test source files. Classes and packages for the integration test artifact should be put in this folder.
+
+
+src/main/resources:
+------------------
+
+Inside this folder you can put all the application resource files. Resources for the main (real) artifact should be put in this folder.
+
+src/test/resources:
+-------------------
+
+Inside this folder you can put all the application test resource files. Resources for the test artifact should be put in this folder
+
+
+
+
+

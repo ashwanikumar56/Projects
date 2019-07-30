@@ -1,0 +1,99 @@
+what is rest assured  ?
+
+REST Assured is a Java library that provides a domain-specific language (DSL) for writing powerful, maintainable tests for RESTful APIs.
+					
+					or
+
+REST Assured is a Java Domain Specific Language API for simplifying testing of RESTful web services. REST Assured API can be used to invoke REST web services and match response content to test them.
+
+
+What is a REST API?
+
+Rest stands for Representational State Transfer. It is an architectural style and an approach for communication used in the development of Web Services. REST has become a logical choice for building APIs. It enables users to connect and interact with cloud services efficiently.
+
+
+REST ASSURED
+
+Rest-Assured is a java library, which will help us in testing REST API. Using this library we can automate sending the HTTP request and validating response. 
+
+
+
+What you will learn from this course.
+
+What is Service Oriented Architecture.
+Introduction to REST-API and REST-Assured
+Setting up environment using Maven
+Setting up environment without Maven
+Installing TestNG
+What is http GET, PUT, POST, DELETE, PATCH request
+Sending GET request using REST-Assured
+Sending POST request using REST-Assured
+Sending PUT request using REST-Assured
+Sending DELETE request using REST-Assured
+Extracting and validating values from JSON response
+JSON Schema Validation.
+Send Parameterized Query.
+Get Response Body using JSON Path.
+
+
+
+What is a SOA – Service Oriented Architecture
+
+Need for SOA :
+
+For example you have a e-commerce website, selling products which is written in PHP and you want your application to communicate with all the major banks website when your customers wants to make payment. Now the problem is you dont know the technology they used to build their websites. Web services can help you achieve this. You can build webservices in any language you want and communicate with other webservice or website which is written in different technology. This communication will be handled by common internet protocols such as HTTP
+The data will be transferred between these two applications using XML or JSON format or even using simple text. XML and JSON formats are known to every programming language and technology and are commonly used for webservices communications.
+
+There are two types of webservices SOAP and RESTful. A large application like Google or Facebook can have multiple webservices communicating with each other for processing data. So the systems/applications built using these webservices can be called as Service Oriented Architecture.
+
+Communication in SOA :
+
+
+
+What is HTTP method :
+
+Whenever in our browser we type in a website URL, the browser sends an HTTP request to the server, where our requested website is deployed on. That HTTP request contains lot of data and a method. The method will define which type of operation you want to perform on the web server
+
+GET:
+POST:
+
+POST method is used to create a new resource. We can send information with the request body, which will be associated with the resource.
+For example a tweet on Twitter, if we are tweeting on twitter, we need to send the text within the request body, there will be some information in the header too.
+PUT:
+
+PATCH:
+PATCH will be our choice if we want to perform UPDATE query. PATCH will only change the entries we specify in our request body
+
+OPTIONS :
+OPTIONS is used to get the information about the communication options of the resource you are interest in. This means with the help of OPTIONS method, you can see which HTTP operations are allowed on a particular resource.
+
+
+HEAD :
+HEAD is exactly like GET except that instead of returning a response body, it returns only a response code and any headers associated with the request.
+
+
+Send GET request using REST-Assured:
+-------------------------------------
+
+http://www.projectdebug.com/send-get-request-using-rest-assured/
+
+GET is used to request a resource from the REST API. Your REST API is supposed to send the response back when you send the GET request. Before using REST-Assured for sending request and validating the data, we must be aware about the URI and the type of data it will accept and send back. While testing an enterprise application, your development team will provide you this information. But, for this training purpose you can use Postman tool to analyse the request and response. Postman is very simple tool for sending the API request. 
+
+Please note we are using Postman only because it will let you see the details of a request and response very clearly, we are not using it for testing. If you want to use any other tool instead of postman, you can use anything.
+
+Send POST request using REST-Assured:
+-------------------------------------
+
+http://www.projectdebug.com/send-post-request-using-rest-assured/
+
+
+ code is in eclipse , Please pay close attention on how we are writing the data in java code. We are using map in java to store all the contents using put() method and then simply sending the map object in body() function.
+Here I introduced @BeforeTest annotation, it is a TestNG annotation. The @BeforeTest is used to perform setup task. The tasks which needs to be performed before the testing. The @BeforeTest annotation will get automatically called before the @Test annotation.
+
+
+
+
+
+
+
+
